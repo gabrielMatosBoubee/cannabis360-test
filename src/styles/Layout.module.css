@@ -1,0 +1,145 @@
+body {
+    position: relative;
+}
+
+.header {
+    overflow: hidden;
+    transition: width 0.3s;
+    align-items: start;
+    justify-content: space-around;
+    background-color: #DADADA;
+    width: 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 10px;
+    left: 0;
+    top: 0;
+}
+
+.header.open {
+    width: 300px;
+  }
+
+  .imgLogo {
+    opacity: 0; /* A imagem inicialmente não é visível */
+    width: 0; /* A imagem inicialmente tem largura 0 */
+    transition: opacity 0.3s, width 0.3s; /* Adiciona uma transição para as propriedades opacity e width */
+  }
+  
+  .imgLogo.open {
+    opacity: 1; /* Quando a classe .open é adicionada, a imagem é mostrada com opacidade 1 */
+    width: 250px; /* Quando a classe .open é adicionada, a imagem tem largura 250px */
+  }
+  
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    display: flex;
+    color: black;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: auto;   
+    transition: transform 0.5s; 
+  }
+  
+.arrow.open {
+    margin: 0;
+    transform: rotate(180deg); /* Rotaciona a seta em 180 graus */
+  }
+  
+
+.link {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+}
+
+.linkContainer {
+    width: 100%;
+}
+
+.icon {
+    margin-left: 20px;
+    min-width: 35px;
+    min-height: 35px;
+    color: #53617A;
+    transition: margin 0.5s, min-width 0.5s, min-height 0.5s; 
+}
+
+.icon.open {
+    margin-left: 0;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 20px;
+}
+
+.text {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.text.open {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    left: 60px;
+    color: black;
+}
+
+.text:hover {
+    text-align: start;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.userInfos {
+    height: 85px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    display: flex;
+    /* border: 1px solid black; */
+    color: black
+}
+
+.userInfos img {
+    width: 85px;
+    height: 85px;
+    border-radius: 26px;
+    margin-right: 5px;
+}
+
+.children {
+    /* background-color: red; */
+    position: absolute;
+    top: 0;
+    left: 100px;
+    right: 0;
+    bottom: 0;
+    transition: left 0.3s;
+  }
+  
+  .children.open {
+    left: 320px;
+  }
+  
