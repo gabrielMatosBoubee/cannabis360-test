@@ -41,7 +41,7 @@ body {
 
 .arrow {
     display: flex;
-    color: black;
+    color: var(--textColor);
     margin: 10px;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@ body {
     align-items: center;
     height: 100%;
     left: 60px;
-    color: black;
+    color: var(--textColor);
 }
 
 .text:hover {
@@ -118,8 +118,7 @@ body {
     align-items: flex-start;
     width: 100%;
     display: flex;
-    /* border: 1px solid black; */
-    color: black
+    color: var(--textColor)
 }
 
 .userInfos img {
@@ -130,16 +129,78 @@ body {
 }
 
 .children {
-    /* background-color: red; */
     position: absolute;
     top: 0;
     left: 100px;
     right: 0;
     bottom: 0;
     transition: left 0.3s;
+    color: var(--textColor);
   }
   
   .children.open {
     left: 320px;
   }
+
+  @media (max-width: 600px) {
+    .header {
+        position: absolute;
+        background-color: transparent;
+        top: 0%;
+        transition: width 1s, height 1s, background-color 1s;
+        width: fit-content;
+        height: fit-content;
+        z-index: 5;
+    }
+
+    .linkContainer {
+        display: none;
+    }   
+
+    .header.open {
+        background-color: #DADADA;
+        top: 0;
+    }
+
+    .header .open {
+        display: block;
+    }
+
+    .arrow {
+        position: relative;
+        left: 0px ;
+        top: 20px;
+        transform: translateY(-50%);
+      }
+
+    .header.open {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .children.open {
+        display: none;
+    }
+
+    .userInfos {
+        display: none;
+    }
+    
+    .userInfos.open {
+        display: flex;
+    }
+  
+    .icon {
+      display: none;
+    }
+
+    .text.open {
+        display: flex;
+    }
+
+    .children {
+        left: 0;
+      }
+  }
+  
   

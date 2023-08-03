@@ -26,12 +26,12 @@ function Layout({children}: Props) {
 				<header className={`${styles.header} ${isMenuOpen ? styles.open : ''}`}>
 					<span className={styles.logoContainer}>
 					<img src={imgLogoLink} className={`${styles.imgLogo} ${isMenuOpen ? styles.open : ''}`} alt="" />
-					<label htmlFor="check" style={{width: "20px", fontSize: "2rem"}}>
+					<label htmlFor="check" className={styles.label} style={{width: "fit-content", fontSize: "2rem"}}>
 							<AiOutlineArrowRight className={`${styles.arrow} ${isMenuOpen ? styles.open : ''}`} />
 							<input style={{display: "none"}} type="checkbox" id="check" onChange={() => setIsMenuOpen(!isMenuOpen)}/>
 					</label>
 					</span>
-					<div className={styles.linkContainer} >
+					<div className={`${styles.linkContainer}  ${isMenuOpen ? styles.open : ''}`} >
 						<NavLink to="/" className={styles.link}>
 							<BsTicketPerforated className={`${styles.icon} ${isMenuOpen ? styles.open : ''}`}/>
 							<p className={`${styles.text} ${isMenuOpen ? styles.open : ''}`}>Pedidos</p>
@@ -64,7 +64,7 @@ function Layout({children}: Props) {
 							<FaGear className={`${styles.icon} ${isMenuOpen ? styles.open : ''}`}/>
 						</NavLink>
 					</div>
-					<span className={styles.userInfos}>
+					<span className={`${styles.userInfos} ${isMenuOpen ? styles.open : ''}`}>
 						<img src={imgLink} alt="imagem" />
 						<p>Gabriel Matos Boubee</p>
 					</span>
