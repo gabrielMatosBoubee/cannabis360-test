@@ -127,16 +127,19 @@ function Requests() {
               {filteredProducts.length > 0 ? (
               filteredProducts.map(({ id, companyName, productName, price, expirationDate, productImage, weight }) => (
                 <tr key={id}>
-                  <td style={{ display: "flex", alignItems: "center" }}>
-                    <div style={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
-                      <img src={productImage} alt={productName} width="50px" height="50px" />
-                      <p style={{ margin: "0 0 0 10px", width: "100%" }}>{productName}</p>
+                  <td style={{display: "flex", alignItems: "center"}}>
+                    <div style={{display: "flex", alignItems: "center", flexGrow: 1}}>
+                      <img src={productImage}
+                          alt={productName} width="50px" height="50px" />
+                      <p className={style.tableContent} 
+                      style={{margin: "0 0 0 10px", width: "100%"}}>
+                        {productName}</p>
                     </div>
                   </td>
-                  <td><span style={{ margin: "5px" }}>{companyName}</span></td>
-                  <td><span>{new Date(expirationDate).toLocaleDateString()}</span></td>
-                  <td><span>{price}</span></td>
-                  <td><span>{weight}</span></td>
+                  <td className={style.tableContent}><span style={{ margin: "5px" }}>{companyName}</span></td>
+                  <td className={style.tableContent}><span>{new Date(expirationDate).toLocaleDateString()}</span></td>
+                  <td className={style.tableContent}><span>{price}</span></td>
+                  <td className={style.tableContent}><span>{weight}</span></td>
                 </tr>
               ))
             ) : (
