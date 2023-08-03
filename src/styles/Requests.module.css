@@ -97,12 +97,16 @@
   }
 
   .filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     width: 100%;
   }
 
   .filters::after {
-    display: block;
+    position: absolute;
+    bottom: 0;
     height: 1px;
     width: 100%;
     content: "";
@@ -117,6 +121,14 @@
     position: relative;
     background-color: transparent;
     border: none;
+    color: var(--textColor);
+  }
+
+  .search {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
     color: var(--textColor);
   }
 
@@ -180,6 +192,8 @@
   }
 
   .customInput {
+    display: flex;
+    align-items: center;
     min-width: 150px;
     text-align: start;
     background-color: transparent;

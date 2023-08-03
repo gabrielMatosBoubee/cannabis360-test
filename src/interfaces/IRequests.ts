@@ -25,9 +25,10 @@ export type IProduct = {
   };
   
 export interface INicialState {
-    company: number,
+    company: string,
     validate: Date | null,
-    price: number
+    price: string,
+    name: string
   }
   
 export interface IAction {
