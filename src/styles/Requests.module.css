@@ -1,0 +1,207 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    height: 80%;
+    margin: 5vh 5vw 5vh 5vw;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid #a7be8d;
+    color: #699e2d;
+    border-radius: 8px;
+    min-width: 20px;
+    max-height: 60px;
+    height: 60px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #699635;
+    color: white;
+}
+
+.confirmButton {
+    margin-left: 30px;
+    min-width: 20px;
+    max-height: 60px;
+    height: 60px;
+    background-color: #699635;
+}
+
+.filterlist {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .filterlist li {
+    transition: color 0.3s;
+    color: #56595c;
+    white-space: nowrap;
+    margin-right: 20px;
+    cursor: pointer; 
+    transition: color 0.3s;
+    position: relative; /* Adiciona posição relativa para o pseudo-elemento ::after */
+  }
+  
+  .filterlist::after {
+    transition: background 0.3s, height 0.3s;
+    position: absolute;
+    bottom: 0px;
+    left: -2%;
+    height: 1px;
+    width: 100%;
+    content: "";
+    background: gray;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .filterlist li:hover {
+    color: var(--textColor);
+  }
+
+  .filterlist li::after {
+    transition: background 0.3s, height 0.3s;
+    position: absolute;
+    bottom: 0px;
+    left: -15%;
+    height: 1px;
+    width: 125%;
+    content: "";
+    background: gray;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .filterlist li:hover::after {
+    background: var(--textColor);
+    height: 2px;
+    z-index: 2;
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+
+  .filters::after {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    content: "";
+    background: gray;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .companyFilter {
+    font-size: medium;
+    font-weight: 500;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: var(--textColor);
+  }
+
+  .search {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    color: var(--textColor);
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  .tag {
+    text-align: start;
+    font-size: large;
+    color: var(--textColor);
+    font-weight: 700;
+  }
+  
+  .tag select {
+    font-size: large;
+    font-weight: 700;
+    position: relative;
+    appearance: none;
+    background-color: white;
+    border: none;
+    color: var(--textColor);
+  }
+
+  .tag span {
+    margin-left: 10px;
+  }
+
+  .tag::after {
+    transition: background 0.3s, height 0.3s;
+    display: block;
+    bottom: 0px;
+    left: -15%;
+    height: 1px;
+    width: 90%;
+    content: "";
+    background: gray;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .tableContent {
+    text-align: start;
+  }
+
+  .tableContent span {
+    margin-left: 20px;
+  }
+
+  .tableContent::after {
+    transition: background 0.3s, height 0.3s;
+    display: block;
+    bottom: 0px;
+    left: -15%;
+    height: 1px;
+    width: 80%;
+    content: "";
+    background: gray;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .customInput {
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+    text-align: start;
+    background-color: transparent;
+    color: var(--textColor);
+  }
+
+  @media (max-width: 600px) {
+    .main {
+        margin-top: 10vh;
+    }
+  }
